@@ -136,9 +136,8 @@ function initContactForm() {
     const orgInput = document.getElementById('orgName')?.value || 'your organisation';
 
     feedback.innerHTML = `
-      <strong>Proposal Request Dispatched!</strong><br />
-      Thank you, ${escapeHtml(fullName)}. Your enquiry on behalf of <em>${escapeHtml(orgInput)}</em> has been successfully registered. 
-      Cara will review your programme objectives and respond within 1–2 business days.
+      <strong>Thanks, ${escapeHtml(firstName || fullName)}!</strong><br />
+      I've received your note regarding <em>${escapeHtml(orgInput)}</em>. I read every submission myself and will get back to you within a day or two. If it feels like a fit, we'll set up a quick 20-minute call to chat through the details.
     `;
     feedback.classList.add('is_visible');
     feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -146,9 +145,9 @@ function initContactForm() {
     const btn = form.querySelector('.btn_chic');
     if (btn) {
       btn.disabled = true;
-      btn.innerHTML = `<span>Request Transmitted ✓</span>`;
-      btn.style.backgroundColor = '#059669';
-      btn.style.borderColor = '#059669';
+      btn.innerHTML = `<span>Brief Sent to Cara ✓</span>`;
+      btn.style.backgroundColor = '#24415c';
+      btn.style.borderColor = '#24415c';
     }
   });
 }
